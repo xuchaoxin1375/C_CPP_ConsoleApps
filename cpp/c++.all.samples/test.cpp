@@ -1,0 +1,111 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main()
+{
+    double p,s,w;
+    int m,b,c;
+    scanf("%lf%lf%lf",&p,&s,&w);
+    if(s<250)
+    {
+         m=(int)(p*s*w);
+         if(m%10>=5)
+         {
+             b=m%10;
+             c=10-b+m;
+           printf("%d",c);
+         }
+         else
+         {
+             b=m%10;
+             c=m-b;
+           printf("%d",c);
+         }
+ 
+    }
+    if(s>=250&&s<500)
+    {
+         m=(int)(p*s*w*0.98);
+         if(m%10>=5)
+         {
+             b=m%10;
+             c=10-b+m;
+           printf("%d",c);
+         }
+         else
+         {
+             b=m%10;
+             c=m-b;
+           printf("%d",c);
+         }
+ 
+    }
+    if(s>=500&&s<1000)
+    {
+         m=(int)(p*s*w*0.95);
+         if(m%10>=5)
+         {
+             b=m%10;
+             c=10-b+m;
+           printf("%d",c);
+         }
+         else
+         {
+             b=m%10;
+             c=m-b;
+           printf("%d",c);
+         }
+ 
+    }
+    if(s>=1000&&s<2000)
+    {
+         m=(int)(p*s*w*0.92);
+         if(m%10>=5)
+         {
+             b=m%10;
+             c=10-b+m;
+           printf("%d",c);
+         }
+         else
+         {
+             b=m%10;
+             c=m-b;
+           printf("%d",c);
+         }
+ 
+    }
+    if(s>=2000&&s<3000)
+    {
+         m=(int)(p*s*w*0.9);
+         if(m%10>=5)
+         {
+             b=m%10;
+             c=10-b+m;
+           printf("%d",c);
+         }
+         else
+         {
+             b=m%10;
+             c=m-b;
+           printf("%d",c);
+         }
+ 
+    }
+    if(s>=3000)
+    {
+         m=(int)(p*s*w*0.85);
+         if(m%10>=5)
+         {
+             b=m%10;
+             c=10-b+m;
+           printf("%d",c);
+         }
+         else
+         {
+             b=m%10;
+             c=m-b;
+           printf("%d",c);
+         }
+ 
+    }
+}
