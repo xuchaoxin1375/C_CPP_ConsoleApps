@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "*.cpp",//如果要编译多个c文件,将*.cpp改为*.c;而在这个文件里我另外配了一个task1c,来对*.c文件执行类似的功能
+                "*.cpp", //如果要编译多个c文件,将*.cpp改为*.c;而在这个文件里我另外配了一个task1c,来对*.c文件执行类似的功能
                 "-o",
                 "${fileDirname}\\All.exe"
             ],
@@ -17,9 +17,11 @@
             "problemMatcher": [
                 "$gcc"
             ],
+            //配置默认的build task(注意不要多个task争抢默认build)
+            // 非默认的task的"group"字段配置为:"group":"build",或考虑将"isDefault"设置为false
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false //改为true就表示设置为默认
             },
             "detail": "build  C++ language files(*.cpp) in the ${fileDirname} directory (not c files) "
         },
@@ -40,10 +42,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "detail": "build C language files(*.c) in the ${fileDirname} directory (rather than c++ files,this is a fork of task1)"
         },
         {
