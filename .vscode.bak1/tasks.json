@@ -63,7 +63,7 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "build active file(c/c++),output a.exe  (For Englis, Chinese characters and other non-English characters)."
+            "detail": "build active file(c/c++),output a.exe  (For English, Chinese characters and other non-English characters)."
         },
         {
             "type": "cppbuild",
