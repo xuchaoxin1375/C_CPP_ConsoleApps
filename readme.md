@@ -72,3 +72,9 @@
 ## 使用过程记录截图
 
 ![a](https://i-blog.csdnimg.cn/direct/9a96c00e580a4c2ca9cc633314598800.png)
+
+### git(gitee/github)在线浏览
+
+图片存在仓库中,防止外部图片丢失的备份
+
+![image-20240913001038047](./assets/image-20240913001038047.png)
