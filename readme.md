@@ -69,3 +69,6 @@
 
 执行成功后,刷新以下文件列表,可以看到`.vscode`内容的变化
 
+## 使用过程记录截图
+
+![a](https://i-blog.csdnimg.cn/direct/9a96c00e580a4c2ca9cc633314598800.png)
