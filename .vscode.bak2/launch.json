@@ -10,6 +10,33 @@
         //     "console": "integratedTerminal"
         // },
         {
+            "name": "C/C++: g++.exe build and debug active file(Recommend for Starter)",
+            "type": "cppdbg",
+            "request": "launch",
+            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "task2"
+        },
+        {
             "name": "C/C++: g++.exe build and debug active file external console",
             "type": "cppdbg",
             "request": "launch",
@@ -19,7 +46,7 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "externalConsole": true,//设置打开外部终端进行调试(个别情况需要在代码中使用system("Pause")来避免一闪而过)
+            "externalConsole": true, //设置打开外部终端进行调试(个别情况需要在代码中使用system("Pause")来避免一闪而过)
             // 通常没有必要设置为外部终端打开,vscode内的集成终端以及足够使用了;
             // vscode中程序执行完毕后外置终端就会自动退出,除非使用Pause来阻止退出
             // Pause可以在源代码末尾中添加system("Pause");但是这就显得有些繁琐了,Dev C++等IDE会自动执行这个命令,而不需要我们手动设置

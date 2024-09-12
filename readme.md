@@ -21,9 +21,31 @@
   - 如果是老windows可能装不了ucrt,那么用MinGw也是可以的
 - 详情命令参考上述博客或者vscode官方文档
 
+### 安装相关软件
+
+- 您可以到官方网站下载vscode,或者其他vscode镜像加速下载(如果官网下载的慢的话);编译器也可通过间接安装,也可以直接安装(镜像加速下载)
+
+- 此外,如果您愿意,我推荐windows用户使用scoop(国内版加速)来快速部署c++/c编程环境
+
+  - 只需要一条命令梭哈所有需要的软件`gcc gdb vscode `(如果需要,可以追加一个`git`,虽然使用scoop一般都有了git环境)
+
+    ```
+    scoop install  gcc gdb vscode # 如果需要为所有用户安装,那需要用管理员执行,此命令追加选项 -g
+    ```
+
+    - 安装完成的瞬间,就可以直接在命令行中访问`g++,gcc,gdb,code`命令或工具了
+
+  - 再启动vscode 下载相关插件,然后打开克隆本项目到本地,直接用vscode打开此文件夹即可
+
 ## 其他C/C++开发环境
 
+- 轻量的小熊猫redpanda-cpp,有开箱即用的版本,一样可以用scoop安装(是轻量版本,配合上述的)
 
+  ```cmd
+  scoop install redpanda-cpp
+  ```
+
+- 重量的vs(visual studio)对中文支持良好,不会有乱码的问题
 
 ## 项目目录解释
 
@@ -35,7 +57,15 @@
   - [Jumping into C++, by Alex Allain - Cprogramming.com](https://www.cprogramming.com/c++book/?inl=bg1)
   - 虽然是收费的,但是有资源
 
+## 关于.vscode目录
 
+使用符号链接定位到两个.vscode版本:`.vscode.bak1`和`.vscode.bak2`
 
+例如切换到`.vscode.bak1`执行以下命令
 
+```powershell
+ New-Item -ItemType SymbolicLink -Path .vscode -Target .vscode.bak1 -Force -Verbose
+```
+
+执行成功后,刷新以下文件列表,可以看到`.vscode`内容的变化
 
