@@ -75,8 +75,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                // "-finput-charset=UTF-8",
-                // "-fexec-charset=gbk"
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"

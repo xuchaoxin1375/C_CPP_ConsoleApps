@@ -10,7 +10,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\a.exe",
-                // "-finput-charset=UTF-8",
+                "-finput-charset=UTF-8",
                 "-fexec-charset=gbk", //尝试将输出外置终端(控制台)的中文乱码的问题解决
                 // 下面使用&&链接shell语句达不到预期效果,可能会导致调试窗口卡死在build(需要手动移除卡死的build任务)
                 // "&&",
@@ -80,8 +80,8 @@
                 "${file}", //编译当前打开(active状态,鼠标点击后)的源文件,无法分辨是否为c/c++源代码,因此如果用这个配置来编译其他语言的源代码会出错!或说回来一个简单工程目录文件中通常只有一种语言,但是复杂项目则往往有多种语言代码文件,这时候要小心配置并选择合适的build task,以及后续的debug配置
                 "-o",
                 "${fileDirname}\\a.exe",
-                // "-finput-charset=UTF-8",
-                // "-fexec-charset=gbk"
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -102,8 +102,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                // "-finput-charset=UTF-8",
-                // "-fexec-charset=gbk"
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"
