@@ -14,11 +14,10 @@
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            // "program": "${fileDirname}\\a.exe",
-            "program": "${workspaceFolder}\\a.exe",
+            "program": "${fileDirname}\\a.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",//注意和对应的task配合
+            "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",

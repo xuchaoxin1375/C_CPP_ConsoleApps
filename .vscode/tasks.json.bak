@@ -1,9 +1,4 @@
 {
-    // https://code.visualstudio.com/docs/editor/variables-reference
-    /* 
-    
-    */
-
     "tasks": [
         {
             "type": "cppbuild",
@@ -15,8 +10,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -77,15 +72,14 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",//如果不使用cwd,那么考虑使用 "${fileNameDir}//${file}"
+                "${file}",
                 "-o",
-                // "${fileDirname}\\a.exe",
-                "${workspaceFolder}\\a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "${fileDirname}\\a.exe",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
-                "cwd": "${fileDirname}"//根据喜好是否使用这个选项(跳转工作目录到源文件所在目录,也可以将工作目录写在args的源文件选项里)
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -104,10 +98,9 @@
                 // "-std=c99",
                 "-lstdc++", //支持编译c/c++两种语言,gcc 需要用上-lstdc++,但是尽量用g++编译c++,避免潜在的问题
                 "-o",
-                // "${fileDirname}\\a.exe",
-                "a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "${fileDirname}\\a.exe",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -130,8 +123,8 @@
                 "-lstdc++", //支持编译c/c++两种语言,gcc 需要用上-lstdc++,但是尽量用g++编译c++,避免潜在的问题
                 "-o",
                 "${workspaceFolder}\\a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -157,8 +150,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk"
             ],
             "options": {
                 "cwd": "${fileDirname}"

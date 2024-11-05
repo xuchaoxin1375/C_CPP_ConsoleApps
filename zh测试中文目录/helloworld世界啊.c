@@ -4,6 +4,6 @@
 
 int main()
 {
-    printf("hello,world 你好世界123456\n");
+    printf("hello,world 你好世界啊ccc\n");
     return 0;
 }
