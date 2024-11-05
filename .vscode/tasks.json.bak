@@ -165,7 +165,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file",
-            "command": "C:\\ProgramData\\scoop\\apps\\mingw\\current\\bin\\gcc",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
