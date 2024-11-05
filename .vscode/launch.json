@@ -10,15 +10,15 @@
         //     "console": "integratedTerminal"
         // },
         {
-            "name": "C/C++: g++.exe build and debug active file(Recommend for C++(by The way C) Starter)",
+            "name": "C/C++: g++ build and debug active file(Recommend for C++(by The way C) Starter)",
             "type": "cppdbg",
             "request": "launch",
-            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            // "program": "${fileDirname}\\a.exe",
-            "program": "${workspaceFolder}\\a.exe",
+            // "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            // "program": "${fileDirname}/a.exe",
+            "program": "${workspaceFolder}/a.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",//注意和对应的task配合
+            "cwd": "${workspaceFolder}", //注意和对应的task配合
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -38,11 +38,11 @@
             "preLaunchTask": "task2"
         },
         {
-            "name": "C/C++: gcc.exe build and debug active file(Recommend for C(by The way c++) Starter)",
+            "name": "C/C++: gcc build and debug active file(Recommend for C(by The way c++) Starter)",
             "type": "cppdbg",
             "request": "launch",
-            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "program": "${fileDirname}\\a.exe",
+            // "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/a.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -65,11 +65,11 @@
             "preLaunchTask": "task2c"
         },
         {
-            "name": "C/C++: g++.exe build and debug active file external console",
+            "name": "C/C++: g++ build and debug active file external console",
             "type": "cppdbg",
             "request": "launch",
-            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "program": "${fileDirname}\\a.exe",
+            // "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/a.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -96,18 +96,18 @@
             "preLaunchTask": "task externalConsole"
         },
         {
-            "name": "C/C++: g++.exe build and debug the C++ language files",
+            "name": "C/C++: g++ build and debug the C++ language files",
             "type": "cppdbg",
             "request": "launch",
-            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "program": "${fileDirname}\\All.exe",
+            // "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/All.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            // "miDebuggerPath": "${env:MSYS2_MINGW}\\gdb.exe",
+            // "miDebuggerPath": "${env:MSYS2_MINGW}/gdb.exe",
             "miDebuggerPath": "gdb",
             "setupCommands": [
                 {
@@ -121,14 +121,14 @@
                     "ignoreFailures": true
                 }
             ],
-            // "preLaunchTask": "C/C++: g++.exe build active file"
+            // "preLaunchTask": "C/C++: g++ build active file"
             "preLaunchTask": "task1"
         },
         {
-            "name": "C/C++: g++.exe build and debug the C language files",
+            "name": "C/C++: g++ build and debug the C language files",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\All.exe",
+            "program": "${fileDirname}/All.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -151,11 +151,11 @@
             "preLaunchTask": "task1c"
         },
         {
-            "name": "C/C++: g++.exe build and debug active file(For English, Chinese characters and other non-English characters)",
+            "name": "C/C++: g++ build and debug active file(For English, Chinese characters and other non-English characters)",
             "type": "cppdbg",
             "request": "launch",
-            // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "program": "${fileDirname}\\a.exe",
+            // "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/a.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -178,10 +178,10 @@
             "preLaunchTask": "task2"
         },
         {
-            "name": "C/C++: g++.exe build and debug active file",
+            "name": "C/C++: g++ build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -204,7 +204,7 @@
             "preLaunchTask": "task3"
         },
         {
-            "name": "C/C++: g++.exe build and run active file(no debug)", // 配置名称
+            "name": "C/C++: gcc build and run active file(no debug)", // 配置名称
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.exe", // 指向编译生成的可执行文件
@@ -212,7 +212,19 @@
             "cwd": "${workspaceFolder}", // 设置工作目录
             // "console": "integratedTerminal", // 在 VSCode 的集成终端中运行
             "stopAtEntry": false,
-            "preLaunchTask": "build and run", // 指定预执行的编译任务名称
+            "preLaunchTask": "build and run by gcc", // 指定预执行的编译任务名称
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "C/C++: g++ build and run active file(no debug)", // 配置名称
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.exe", // 指向编译生成的可执行文件
+            "args": [], // 可选参数，传递给程序的命令行参数
+            "cwd": "${workspaceFolder}", // 设置工作目录
+            // "console": "integratedTerminal", // 在 VSCode 的集成终端中运行
+            "stopAtEntry": false,
+            "preLaunchTask": "build and run by g++", // 指定预执行的编译任务名称
             "internalConsoleOptions": "neverOpen"
         }
     ]

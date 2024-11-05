@@ -8,15 +8,13 @@
         {
             "type": "cppbuild",
             "label": "task externalConsole",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "${fileDirname}/a.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -30,13 +28,13 @@
         {
             "type": "cppbuild",
             "label": "task1",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "*.cpp",
                 "-o",
-                "${fileDirname}\\All.exe"
+                "${fileDirname}/All.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -53,13 +51,13 @@
         {
             "type": "cppbuild",
             "label": "task1c",
-            "command": "gcc.exe",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "*.c",
                 "-o",
-                "${fileDirname}\\All.exe"
+                "${fileDirname}/All.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -73,19 +71,16 @@
         {
             "type": "cppbuild",
             "label": "task2",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",//如果不使用cwd,那么考虑使用 "${fileNameDir}//${file}"
+                "${file}",
                 "-o",
-                // "${fileDirname}\\a.exe",
-                "${workspaceFolder}\\a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "${workspaceFolder}/a.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"//根据喜好是否使用这个选项(跳转工作目录到源文件所在目录,也可以将工作目录写在args的源文件选项里)
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -96,18 +91,14 @@
         {
             "type": "cppbuild",
             "label": "task2c",
-            "command": "gcc.exe",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                // "-std=c99",
-                "-lstdc++", //支持编译c/c++两种语言,gcc 需要用上-lstdc++,但是尽量用g++编译c++,避免潜在的问题
+                "-lstdc++",
                 "-o",
-                // "${fileDirname}\\a.exe",
-                "a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "a.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -119,19 +110,14 @@
             "detail": "build active file(c source code single file),output a.exe  (For Englis, Chinese characters and other non-English characters source code file name)."
         },
         {
-            "label": "build and run",
+            "label": "build and run by gcc",
             "type": "cppbuild",
-            "command": "gcc.exe",
+            "command": "gcc",
             "args": [
-                // "-fdiagnostics-color=always",
-                // "-g",
                 "${file}",
-                // "-std=c99",
-                "-lstdc++", //支持编译c/c++两种语言,gcc 需要用上-lstdc++,但是尽量用g++编译c++,避免潜在的问题
+                "-lstdc++",
                 "-o",
-                "${workspaceFolder}\\a.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "${workspaceFolder}/a.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -143,6 +129,25 @@
             "detail": "build and run active file(c/c++ source code single file),non-english path may cause error."
         },
         {
+            "label": "build and run by g++",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "${file}",
+                // "-lstdc++",
+                "-o",
+                "${workspaceFolder}/a.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "build and run active file(c++/c source code single file),non-english path may cause error."
+        },
+        {
             "label": "echo",
             "type": "shell",
             "command": "echo ${workspaceFolder}"
@@ -150,15 +155,13 @@
         {
             "type": "cppbuild",
             "label": "task3",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                //"-finput-charset=UTF-8",
-                //"-fexec-charset=gbk"
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -171,14 +174,14 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\ProgramData\\scoop\\apps\\mingw\\current\\bin\\gcc.exe",
+            "label": "C/C++: gcc build active file",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -191,6 +194,26 @@
                 "isDefault": true
             },
             "detail": "Task generated by Debugger."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: /usr/bin/g++"
         }
     ],
     "version": "2.0.0"

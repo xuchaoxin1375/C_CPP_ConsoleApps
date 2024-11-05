@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "task externalConsole",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -25,7 +25,7 @@
         {
             "type": "cppbuild",
             "label": "task1",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -48,7 +48,7 @@
         {
             "type": "cppbuild",
             "label": "task1c",
-            "command": "gcc.exe",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -68,7 +68,7 @@
         {
             "type": "cppbuild",
             "label": "task2",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -90,7 +90,7 @@
         {
             "type": "cppbuild",
             "label": "task2c",
-            "command": "gcc.exe",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -114,7 +114,7 @@
         {
             "label": "build and run",
             "type": "cppbuild",
-            "command": "gcc.exe",
+            "command": "gcc",
             "args": [
                 // "-fdiagnostics-color=always",
                 // "-g",
@@ -143,7 +143,7 @@
         {
             "type": "cppbuild",
             "label": "task3",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -164,8 +164,8 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\ProgramData\\scoop\\apps\\mingw\\current\\bin\\gcc.exe",
+            "label": "C/C++: gcc build active file",
+            "command": "C:\\ProgramData\\scoop\\apps\\mingw\\current\\bin\\gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",

@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "task externalConsole",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -28,7 +28,7 @@
         {
             "type": "cppbuild",
             "label": "task1",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -53,7 +53,7 @@
         {
             "type": "cppbuild",
             "label": "task1c",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -73,7 +73,7 @@
         {
             "type": "cppbuild",
             "label": "task2",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -95,7 +95,7 @@
         {
             "type": "cppbuild",
             "label": "task3",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",

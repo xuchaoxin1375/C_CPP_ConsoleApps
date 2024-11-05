@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include <windows.h> // For system("pause")
+// #include <windows.h> // For system("pause")
 using namespace std;
 
 int main()

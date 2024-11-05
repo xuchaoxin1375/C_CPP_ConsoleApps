@@ -1,7 +1,7 @@
 {
 	"type" : "cppbuild",
 	"label" : "task1",
-	"command" : "${env:USERNAME}/g++.exe",
+	"command" : "${env:USERNAME}/g++",
 	"args" : [
 		"-fdiagnostics-color=always",
 		"-g",

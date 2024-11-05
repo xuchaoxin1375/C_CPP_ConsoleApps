@@ -10,7 +10,7 @@
         //     "console": "integratedTerminal"
         // },
         {
-            "name": "C/C++: g++.exe build and debug active file(Recommend for C++(by The way C) Starter)",
+            "name": "C/C++: g++ build and debug active file(Recommend for C++(by The way C) Starter)",
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -37,7 +37,7 @@
             "preLaunchTask": "task2"
         },
         {
-            "name": "C/C++: gcc.exe build and debug active file(Recommend for C(by The way c++) Starter)",
+            "name": "C/C++: gcc build and debug active file(Recommend for C(by The way c++) Starter)",
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -64,7 +64,7 @@
             "preLaunchTask": "task2c"
         },
         {
-            "name": "C/C++: g++.exe build and debug active file external console",
+            "name": "C/C++: g++ build and debug active file external console",
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -95,7 +95,7 @@
             "preLaunchTask": "task externalConsole"
         },
         {
-            "name": "C/C++: g++.exe build and debug the C++ language files",
+            "name": "C/C++: g++ build and debug the C++ language files",
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -120,11 +120,11 @@
                     "ignoreFailures": true
                 }
             ],
-            // "preLaunchTask": "C/C++: g++.exe build active file"
+            // "preLaunchTask": "C/C++: g++ build active file"
             "preLaunchTask": "task1"
         },
         {
-            "name": "C/C++: g++.exe build and debug the C language files",
+            "name": "C/C++: g++ build and debug the C language files",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\All.exe",
@@ -150,7 +150,7 @@
             "preLaunchTask": "task1c"
         },
         {
-            "name": "C/C++: g++.exe build and debug active file(For English, Chinese characters and other non-English characters)",
+            "name": "C/C++: g++ build and debug active file(For English, Chinese characters and other non-English characters)",
             "type": "cppdbg",
             "request": "launch",
             // "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -177,7 +177,7 @@
             "preLaunchTask": "task2"
         },
         {
-            "name": "C/C++: g++.exe build and debug active file",
+            "name": "C/C++: g++ build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -203,7 +203,7 @@
             "preLaunchTask": "task3"
         },
         {
-            "name": "C/C++: g++.exe build and run active file(no debug)", // 配置名称
+            "name": "C/C++: g++ build and run active file(no debug)", // 配置名称
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.exe", // 指向编译生成的可执行文件
