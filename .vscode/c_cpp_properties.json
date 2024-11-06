@@ -10,7 +10,9 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            // "compilerPath": "g++",
+            // "compilerPath": "C:/ProgramData/scoop/apps/mingw/current/bin/g++",
+            // C:/ProgramData/scoop/apps/winlibs-mingw-ucrt/current/bin/g++
+            //  C:/ProgramData/scoop/apps/mingw/current/bin/g++
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "windows-gcc-x64"
