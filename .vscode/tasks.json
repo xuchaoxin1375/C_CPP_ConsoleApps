@@ -92,6 +92,27 @@
         },
         {
             "type": "cppbuild",
+            "label": "task2 winlibs",
+            // "command": "g++",
+            "command": "C:\\ProgramData\\scoop\\apps\\mingw-winlibs-ucrt\\current\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/a.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "build active file(c/c++ source code single file),output a.exe  (For Englis, Chinese characters and other non-English characters source code file name)."
+        },
+        {
+            "type": "cppbuild",
             "label": "task2c",
             "command": "gcc",
             "args": [
@@ -206,8 +227,34 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                // "-finput-charset=UTF-8",
-                // "-fexec-charset=gbk",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                // "${fileDirname}\\a.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "try output non-english characters exe name."
+        },
+        {
+            "type": "cppbuild",
+            "label": "task by winlibs mingw for windows",
+            "command": "C:\\ProgramData\\scoop\\apps\\mingw-winlibs-ucrt\\current\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=gbk",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
