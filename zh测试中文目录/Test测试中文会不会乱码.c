@@ -4,6 +4,6 @@
 
 int main()
 {
-    printf("hello,world 你好世界啊ccc\n");
+    printf("Hi,本次测试 中文没有乱码!   \n");
     return 0;
 }
