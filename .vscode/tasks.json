@@ -10,6 +10,8 @@
             "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
+                // "-finput-charset=UTF-8",
+                "-fexec-charset=gbk", //windows外部终端容易乱码,根据需要是否启用这一行
                 "-g",
                 "${file}",
                 "-o",

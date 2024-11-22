@@ -6,7 +6,7 @@ int main()
 	 int a = ~21;
 	 unsigned b = ~21;
 	//  cout << a << "," << b << "," << hex << a << "," << b;
-	 cout << a  << "," << b << "," << hex << a << "," << b;
+	 cout << a  << "|" << b << "," << hex << a << "," << b;
 
 	 return 0;
 }

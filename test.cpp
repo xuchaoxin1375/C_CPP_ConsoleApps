@@ -1,46 +1,78 @@
 #include <iostream>
-#include <iomanip> //提供非十进制数形式输出
 using namespace std;
 
-void print_int_bin(int number);
-
-int main()
+/*  求小数转换为二进制后的数码 方法1:递推 */
+void d1(float f, int r)
 {
-  long long l = 123456789011LL;
-  long long l1 = 123456789011;
-  long long l2 = 0xffff000000000001;
-  long long l3 = 0xffff000080000000;
-  long long l4 = 0x0000000000000001;
-
-  int i1 = l1;
-  int i2 = l2;
-  int i3 = l3;
-  int n = -1;
-  int b = 0b1010;
-  cout << "l=" << l << endl
-       << "l1=" << l1 << endl
-       << "l2=" << l2 << endl // l2=-281474976710655
-       << "l3=" << l3 << endl // l3=-281472829227008
-       << "l4=" << l4 << endl // l4=1
-       //  << "i1=" << i1 << endl
-       << "i2=" << i2 << endl                                       // i2=1
-       << "i3=" << i3 << endl;                                      // i3=-2147483648=-2^{31}
-  cout << "i2=" << setw(8) << setfill('0') << hex << i2 << endl     // i2=00000001
-       << "i3=" << setw(8) << setfill('0') << hex << i3 << endl;    // i3=80000000
-  cout << "n=-1=0x" << setw(8) << setfill('0') << hex << n << endl; // 查看-1的补码
-  cout << "b=" << dec << b << endl<<endl;                                 // b=10
-
-  print_int_bin(i2);
-  print_int_bin(i3);
-
-  return 0;
+  while (f > 0)
+  {
+    int k;
+    f *= r;     // 小数点往右挪一位
+    k = (int)f; // 获取整数位
+    cout << k;  // 打印整数位作为数码
+    f -= k;     // 取f的小数部分,用类似方操作计算下一位数码,形如递推
+  }
 }
 
-void print_int_bin(int number)
+/*  求小数转换为二进制后的数码 方法2:通项 */
+void d2(float f, int r)
 {
-  for (int i = 31; i >= 0; --i)
+  int k = 0;
+  while (f - (int)f)
   {
-    std::cout << ((number >> i) & 1);
+    f *= r;
+    k = (int)f % r;
+    cout << k;
+    // if (f - (int)f == 0)//小数部分为0时退出
+    //   break;
   }
-  std::cout << std::endl;
+}
+void intr1(float f, int r)
+{
+  int n = (int)f;
+  int k = 0;
+  // 由于求整数部分的数码是从低位到高位,这里使用递归的方式逆序打印
+  if (n == 0)
+  {
+    return;
+  }
+  k = n % r;
+  n = (n - k) / r;
+  intr1(n, r);
+  cout << k;//打印语句放在递归调用后才可以逆序打印
+  // 以下是从低位到高位打印的方案
+  // while (n)
+  // {
+  //   k = n % r;
+  //   cout << k;
+  //   f /= r;
+  //   n = (n - k) / r;
+
+  // }
+}
+void intr2(float f, int r)
+{
+  int n = (int)f;
+  int k = 0;
+  k = n % r;      // 不要立刻打印k,留到递归调用后打印,才可以逆序打印
+  n = int(n / r); // 这里的int可以不写,C/C++自动截取整数,因为n是int型
+  if (n)
+  {
+    intr2(n, r);
+  }
+
+  cout << k;
+}
+int main()
+{
+
+  int r = 8;//要将数转换为r进制表示
+  float f = 0;
+  cout << "input a number(decimal),such as 4.625: ";
+  cin >> f;
+  intr2(f, r);
+  cout << '.';
+  d2(f - (int)f, r);
+  cout << endl;
+  return 0;
 }
