@@ -16,10 +16,10 @@
 - 经过一段时间的探索和试验,结合官方文档的指南,生成了`.vscode`目录下的3个配置文件
   - 配置详情参看:[Vscode配置C/C++编程环境@配置C和CPP的运行和调试环境@配置过程的相关问题@中文文件名乱码@build和debug方案组合配置](https://blog.csdn.net/xuchaoxin1375/article/details/138172679)
 
-- 特别是安装Msys2,可以用国内镜像,安装包下载完后可以断网安装(中途可能试图更新一些数据,但这个速度可能很慢),离线安装的话可能更快
-  - 安装完了msys2后默认是没有ucrt组件,所以如果像官网那样使用的路径,需要我们进一步安装ucrt
-  - 如果是老windows可能装不了ucrt,那么用MinGw也是可以的
-- 详情命令参考上述博客或者vscode官方文档
+## 配置
+
+- vscode c/c++相关插件和推荐插件写在`.vscode/extensions.json`中,vscode如果检测到你没有安装相应插件,回提示你安装
+- 也可以使用profile(导入配置,文件位于`.vscode/C-C++ consoleApps_share.code-profile`),通过设置->profile->导入profile会创建一个专门和C/C++相关的插件环境,其他插件不会加载
 
 ### 安装相关软件
 
