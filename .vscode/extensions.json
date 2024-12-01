@@ -1,8 +1,8 @@
 {
     "recommendations": [
         "danielpinto8zz6.c-cpp-compile-run",
-        "ms-vscode.cpptools-extension-pack",
         "guyutongxue.cpp-reference",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "ms-vscode.cpptools"
     ]
 }
