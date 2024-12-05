@@ -6,6 +6,8 @@ typedef struct LNode
     ElemType data;      // 数据域
     struct LNode *next; // 指针域
 } LNode, *LinkList;
+typedef LNode Node;
+// typedef Node *LinkList;
 /*
 这里利用typedef 定义了两个别名，LNode为结构体类型，LinkList为结构体指针类型;
 根据typedef的用法,LNode,*LinkList 表达式值都是struct LNode类型,因此,LNode是结构体类型,LinkList是结构体指针类型;
@@ -47,9 +49,33 @@ struct SNode
 };
 typedef struct SLinkList
 {
-    SNode list[MaxSize];//SNode类型的数组
+    struct SNode list[MaxSize]; // SNode类型的数组
 } SLinkList;
 /*
 利用已经定义好的SNode类型,再定义一个SLinkList类型,内部包含一个数组(元素类型为SNode类型,有MaxSize个元素);
 这种定义也可以,但是结构中仅包含变量,不太值得单独用typedef定义,可以考虑
  */
+#define bool int
+#define true 1
+#define false 0
+bool ListDelete(Node *L, int i, ElemType *e)
+{
+    Node *p = L;
+    int j = 0;
+    // 找到第i个结点的前驱(第i-1个结点)
+    while (p && j < i - 1)
+    {
+        p = p->next;
+        j++;
+    }
+    // 如果此时p是尾结点(后继结点为空,不用删除)或者空指针(没有后继),两种情况都说明i不合法
+    if (p == NULL || p->next == NULL)
+    {
+        return false;
+    }
+    Node *q = p->next;
+    *e = q->data; // 返回被删除的值
+    p->next = q->next;//更新后继(断开q结点)
+    free(q);//释放q的内存空间
+    return true;
+}

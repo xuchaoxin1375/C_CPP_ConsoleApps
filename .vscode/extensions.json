@@ -3,6 +3,7 @@
         "danielpinto8zz6.c-cpp-compile-run",
         "guyutongxue.cpp-reference",
         "usernamehw.errorlens",
-        "ms-vscode.cpptools"
+        "ms-vscode.cpptools",
+        "formulahendry.code-runner"
     ]
 }

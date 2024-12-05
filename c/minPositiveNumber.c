@@ -21,10 +21,22 @@ int main()
 /*
 时间复杂度为O(n^2),空间复杂度为O(1)
  */
+/**
+ * Finds the smallest positive integer that does not appear in the array.
+ * 
+ * This function iterates through the given array of integers to find the maximum value.
+ * If the maximum value is greater than 0, it starts an infinite loop from 1 to find the smallest
+ * positive integer that does not appear in the array. If no such number is found, it returns 1.
+ * 
+ * @param nums The array of integers.
+ * @param n The length of the array.
+ * @return The smallest positive integer that does not appear in the array.
+ */
 int min_positive_number(int nums[], int n)
 {
-
+    // Initialize the maximum value variable to 0
     int max = 0;
+    // Iterate through the array to find the maximum value
     for (int i = 0; i < n; i++)
     {
         if (nums[i] > max)
@@ -32,12 +44,14 @@ int min_positive_number(int nums[], int n)
             max = nums[i];
         }
     }
+    // If the maximum value is greater than 0, start looking for the smallest positive integer
     if (max > 0)
     {
         // int mp = 1;
         for (int i = 1; 1; i++)
         {
             int j = 0;
+            // Check if the current number i exists in the array
             for (; j < n; j++)
             {
                 if (i == nums[j])
@@ -45,6 +59,7 @@ int min_positive_number(int nums[], int n)
                     break;
                 }
             }
+            // If the current number i does not exist in the array, return i
             if (j == n)
             {
                 return i;
@@ -52,6 +67,7 @@ int min_positive_number(int nums[], int n)
         }
     }
 
+    // If the maximum value is not greater than 0, return 1 directly
     return 1;
 }
 
@@ -63,13 +79,27 @@ int min_positive_number(int nums[], int n)
 可以定义一个n+1个元素的数组,这样可以更直观统计1~n的数字出现的次数(能够统计数n的个数)
  */
 
+/**
+ * 寻找数组中最小的正整数
+ * 
+ * @param nums 一个整数数组
+ * @param n 数组的长度
+ * @return 返回数组中最小的正整数，如果1到n都存在，则返回n+1
+ *
+ * 该函数通过计数的思想，找出缺失的最小正整数。首先初始化一个计数数组s，
+ * 长度为n+1，用于统计数组nums中出现的正整数。然后遍历nums数组，对出现在1到n
+ * 范围内的正整数进行计数。最后，遍历计数数组s，找到第一个计数为0的索引，即
+ * 为缺失的最小正整数。如果1到n范围内的所有正整数都存在，则返回n+1。
+ */
 int min_positive_number2(int nums[], int n)
 {
+    // 初始化计数数组s，长度为n+1，初始值都为0
     int s[n + 1];
     for (int i = 0; i < n + 1; i++)
     {
         s[i] = 0;
     }
+    
     // 统计出现的数字(负数不用管,大于n的数也不用管)
     for (int i = 0; i < n; i++)
     {
@@ -78,23 +108,20 @@ int min_positive_number2(int nums[], int n)
             s[nums[i]]++;
         }
     }
-    // int m = 0;
+    
+    // 从1开始遍历计数数组s，寻找第一个计数为0的索引
     int i = 1;
     for (; i <= n; i++)
     {
-        // printf("s[%d]=%d\n", i, s[i]);
         if (s[i] == 0)
         {
-            // printf("return %d\n", i);
+            // 找到缺失的最小正整数，返回之
             return i;
         }
     }
+    
+    // 如果1到n都存在，则返回n+1
     return n + 1;
-    // 返回n+1(1~n都出现了)
-    // if (i = n + 1)
-    // {
-    //     return n + 1;
-    // }
 }
 /*
 和上一个算法的区别是,使用malloc函数动态分配空间,使用free函数释放空间
