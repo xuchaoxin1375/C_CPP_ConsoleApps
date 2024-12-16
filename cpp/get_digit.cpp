@@ -8,11 +8,11 @@ int main(int argc, char const *argv[])
 
     extern int get_bit_shift(int x, int n);
     extern int get_bit_mod(int x, int n);
-    int (*func)(int, int);
-    int n = 124;
     // 借助函数指针来引用不同的同结构函数
+    int (*func)(int, int);
     func = get_bit_mod;
     // func = get_bit_shift;
+    int n = 124;
 
     for (int i = 0; i < 32; i++)
     {

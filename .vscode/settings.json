@@ -11,6 +11,9 @@
         "*.yrf": "json",
         "*.rpx": "xml",
         "*.stl": "json",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "iostream": "cpp",
+        "stdio.h": "c",
+        "stdlib.h": "c"
     }
 }
